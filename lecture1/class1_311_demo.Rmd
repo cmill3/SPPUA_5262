@@ -1,0 +1,37 @@
+---
+title: "class1_data"
+output: html_document
+date: "2025-09-03"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, echo=FALSE, include=FALSE}
+# Load required libraries
+library(tidycensus) ##i need tidycensus to grab census data
+library(dplyr) ## I need dplyr for data manipulation
+library(tidyr) ##tidyr lets me
+library(ggplot2)
+```
+
+## Step 1 - Load 311 data
+```{r,echo=FALSE}
+setwd("/Users/charlesmiller/Documents/Code/SPPUA_5262/lecture1/data/")
+filename <- "311_City_Service_Requests_in_2024.csv"
+dc_311 <- read.csv(filename)
+```
+
+## Step 2 - Explore the data
+```{r cars}
+summary(dc_311)
+```
+
+
+## Step 3 - Plot
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
